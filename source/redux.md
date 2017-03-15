@@ -43,11 +43,11 @@ ReactDOM.render(
 )
 ```
 
-If you'd like to use a different root key for the client reducer (rather than `apollo`), use the `reduxRootKey: "key"` option when creating the client:
+If you'd like to use a different root key for the client reducer (rather than `apollo`), use the `reduxRootSelector: () => "key"` option when creating the client:
 
 ```js
 const client = new ApolloClient({
-  reduxRootKey: 'differentKey',
+  reduxRootSelector: () => 'differentKey',
 });
 
 const store = createStore(
